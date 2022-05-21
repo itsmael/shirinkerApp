@@ -1,1 +1,0 @@
-"Server=localhost;Database=master;User Id=sa;Password=Spock1701;"
