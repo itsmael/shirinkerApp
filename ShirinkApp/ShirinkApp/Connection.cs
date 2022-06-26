@@ -1,40 +1,55 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShirinkApp
 {
-    public class Connection
+    public static class  Connection
     {
-        SqlConnection con = new SqlConnection();
-        
-        //Constructor
-        public Connection (string conString)
-        {
-            con.ConnectionString = conString;
-            Console.WriteLine(conString);
-        }
+        static  SqlConnection con = new SqlConnection();
 
         //Method Connect
-        public SqlConnection connect()
+        public static SqlConnection Connect()
         {
-            if (con.State == System.Data.ConnectionState.Closed)
+            if (con.State == ConnectionState.Closed)
             {
+                con.ConnectionString = ConnectionStringGenerator.ConStringGenerator();
                 con.Open();
             }
             return con;
         }
 
-        //Method Desconect
-        public void disconnect()
+        public static DataTable GetData<T>(string query, SqlConnection conexao)  where T : IDbDataAdapter, IDisposable, new()
         {
-            if (con.State == System.Data.ConnectionState.Open)
+            try
             {
-                con.Close();
+                var dataTable = new DataTable();
+                using (conexao)
+                {
+                    using (var da = new T())
+                    {
+                        using (da.SelectCommand = conexao.CreateCommand())
+                        {
+                            da.SelectCommand.CommandText = query;
+                            //da.SelectCommand.Connection 
+                            DataSet ds = new DataSet();
+                            da.Fill(ds);
+                            if (ds.Tables[0].Rows.Count > 0)
+                                dataTable = ds.Tables[0];
+                            return dataTable;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
             }
         }
+
     }
 }

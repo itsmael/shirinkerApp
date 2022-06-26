@@ -6,3 +6,11 @@ D:\projects\shirinker\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.csproj.Suggeste
 D:\projects\shirinker\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.csproj.CoreCompileInputs.cache
 D:\projects\shirinker\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.exe
 D:\projects\shirinker\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.pdb
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\bin\Debug\ShirinkApp.exe.config
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\bin\Debug\ShirinkApp.exe
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\bin\Debug\ShirinkApp.pdb
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.csproj.AssemblyReference.cache
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.csproj.SuggestedBindingRedirects.cache
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.csproj.CoreCompileInputs.cache
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.exe
+D:\projects\shirinkerApp\ShirinkApp\ShirinkApp\obj\Debug\ShirinkApp.pdb
